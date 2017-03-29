@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1">
+    <title></title>
+    <link href="mediabox/mediabox.css" rel="stylesheet" type="text/css">
+    <style>
+        body { margin: 0 }
+    </style>
+    <script src="zepto.min.js"></script>
+    <script src="mediabox/mediabox.js"></script>
+
+</head>
+<body>
+<div class="music" style="border-color: rgb(230, 230, 230);">
+    <audio data-type="5" data-objid="574e830f0cf207740695e524" data-subtype="" data-extra="" src="http://a.quanminxingtan.com/574e830f0cf207740695e524" preload="none"></audio>
+</div>
+<!--<video id="vid" class="video" poster="./img/demo-live-photo.jpg" src="https://media.w3.org/2010/05/sintel/trailer.mp4" style="background:url(http://i.quanminxingtan.com/57747f010cf29b02c792ec2b) center no-repeat;"></video>-->
+<div class="video" data-objid="57725e20f77e1a1c4671c3f1" data-poster="http://i.quanminxingtan.com/57747f010cf29b02c792ec2b" style="background:url(http://i.quanminxingtan.com/57747f010cf29b02c792ec2b) center no-repeat;">
+    <video data-type="1" data-subtype="0" data-extra="" controls="controls" preload="none" src="http://7xia2s.com2.z0.glb.qiniucdn.com/579857ba0cf2fc332b9239c2"   width="355" height="199"></video>
+</div>
+<script>
+    $('.video').mediaBox({media: 'video'});
+    $('.music').mediaBox({media: 'audio'});
+
+
+</script>
+</body>
+</html>

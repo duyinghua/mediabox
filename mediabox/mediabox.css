@@ -1,0 +1,43 @@
+.jmb-video { position: relative; margin: 10px; font-family: helvetica, arial, simsun, sans-serif; }
+.jmb-video * { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+.jmb-video video { display: block; width: 100%; height: 200px; background-color: #000; background-size: contain; }
+.jmb-video video.played { background: none; }
+.jmb-video .jmb-poster { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
+.jmb-video .jmb-ctrl-bar { display: -webkit-box; height: 30px; line-height: 30px; background: rgba(0, 0, 0, 0.6); color: #FFF; position: absolute; bottom: 0; left: 0; right: 0; overflow: hidden; }
+.jmb-video .jmb-ctrl-bar .jmb-play { width: 30px; height: 30px; background: url(./btn_media_play.png) no-repeat center center; background-size: 14px; }
+.jmb-video.playing .jmb-ctrl-bar .jmb-play { background: url(./btn_media_stop.png) no-repeat center center; background-size: 14px; }
+.jmb-video .jmb-ctrl-bar .jmb-progress { display: -webkit-box; -webkit-box-flex: 1; width: 200px; height: 30px; font-size: 12px; margin: 0 10px; }
+.jmb-video .jmb-ctrl-bar .jmb-progress-bar { position: relative; -webkit-box-flex: 1; width: 100px; height: 2px; margin: 0 10px; margin-top: 14px; background: #000; }
+.jmb-video .jmb-ctrl-bar .jmb-progress-bar .jmb-progress-buffer { position: absolute; width: 0%; height: 100%; background: #999; }
+.jmb-video .jmb-ctrl-bar .jmb-progress-bar .jmb-progress-val { position: absolute; width: 0%; height: 100%; background: #FF6628; }
+.jmb-video .jmb-ctrl-bar .jmb-progress-bar .jmb-progress-val .jmb-progress-slider { display: block; position: absolute; top: -14px; right: -15px; width: 30px; height: 30px; background: url(./btn_loading.png) no-repeat center center; background-size: 9px; }
+.jmb-video .jmb-ctrl-bar .jmb-cur-time { width: 50px; height: 30px; text-align: center; }
+.jmb-video .jmb-ctrl-bar .jmb-total-time { width: 50px; height: 30px; text-align: center; }
+.jmb-video .jmb-ctrl-bar .jmb-btn { width: 30px; height: 30px; background: url(./btn_media_share.png) no-repeat center center; background-size: 14px; }
+.jmb-video .jmb-toast { display: -webkit-box; position: absolute; left: 0; right: 0; top: 0; bottom: 0; -webkit-box-pack: center; -webkit-box-align: center; }
+.jmb-video .jmb-toast .jmb-toast-text { background-color: rgba(0, 0, 0, 0.9); border-radius: 5px; color: #FFF; font-size: 12px; padding: 8px; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
+/*.jmb-video .jmb-loading { display: block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: url(./loading.gif) no-repeat center center; background-size: 31px; }*/
+.jmb-video .jmb-loading { display: -webkit-box; position: absolute; left: 0; right: 0; top: 0; bottom: 0; -webkit-box-pack: center; -webkit-box-align: center; }
+.jmb-video .jmb-loading .jmb-loader, .jmb-loader:before, .jmb-loader:after { background: rgba(238, 238, 238, 0.8); -webkit-animation: jmbLoadAni 1s infinite ease-in-out; animation: loadAni 1s infinite ease-in-out; width: 3px; height: 8px; }
+.jmb-video .jmb-loading .jmb-loader { position: relative; -webkit-animation-delay: -0.16s; animation-delay: -0.16s; }
+.jmb-video .jmb-loading .jmb-loader:before, .jmb-loader:after { position: absolute; top: 0; content: ''; }
+.jmb-video .jmb-loading .jmb-loader:before { left: -10px; -webkit-animation-delay: -0.32s; animation-delay: -0.32s; }
+.jmb-video .jmb-loading .jmb-loader:after { left: 10px; }
+@-webkit-keyframes jmbLoadAni {
+    0%, 80%, 100% { box-shadow: 0 0 rgba(238, 238, 238, 0.8); height: 8px; }
+    40% { box-shadow: 0 -4px rgba(238, 238, 238, 0.8); height: 16px; }
+}
+.jmb-audio { position: relative; margin: 10px; font-family: helvetica, arial, simsun, sans-serif; }
+.jmb-audio * { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+.jmb-audio .jmb-ctrl-bar { display: -webkit-box; height: 30px; line-height: 30px; background: #333; color: #FFF; overflow: hidden; border-radius: 5px; }
+.jmb-audio .jmb-ctrl-bar .jmb-play { width: 30px; height: 30px; background: url(./btn_media_play.png) no-repeat center center; background-size: 14px; }
+.jmb-audio.playing .jmb-ctrl-bar .jmb-play { background: url(./btn_media_stop.png) no-repeat center center; background-size: 14px; }
+.jmb-audio .jmb-ctrl-bar .jmb-progress { display: -webkit-box; -webkit-box-flex: 1; width: 200px; height: 30px; font-size: 12px; margin: 0 10px; }
+.jmb-audio .jmb-ctrl-bar .jmb-progress-bar { position: relative; -webkit-box-flex: 1; width: 100px; height: 2px; margin: 0 10px; margin-top: 14px; background: #000; }
+.jmb-audio .jmb-ctrl-bar .jmb-progress-bar .jmb-progress-buffer { position: absolute; width: 0%; height: 100%; background: #999; }
+.jmb-audio .jmb-ctrl-bar .jmb-progress-bar .jmb-progress-val { position: absolute; width: 0%; height: 100%; background: #FF6628; }
+.jmb-audio .jmb-ctrl-bar .jmb-progress-bar .jmb-progress-val .jmb-progress-slider { display: block; position: absolute; top: -14px; right: -15px; width: 30px; height: 30px; background: url(./btn_loading.png) no-repeat center center; background-size: 9px; }
+.jmb-audio .jmb-ctrl-bar .jmb-cur-time { width: 30px; height: 30px; text-align: center; white-space: nowrap; word-wrap: normal; word-break: normal; }
+.jmb-audio .jmb-ctrl-bar .jmb-total-time { width: 30px; height: 30px; text-align: center; white-space: nowrap; word-wrap: normal; word-break: normal; }
+.jmb-audio .jmb-ctrl-bar .jmb-separator { display: block; width: 10px; height: 30px; text-align: center; }
+.jmb-audio .jmb-ctrl-bar .jmb-btn { width: 30px; height: 30px; background: url(./btn_media_share.png) no-repeat center center; background-size: 14px; }
